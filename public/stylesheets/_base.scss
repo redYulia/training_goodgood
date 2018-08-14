@@ -1,0 +1,23 @@
+@import '_fonts.scss';
+@import '_colors.scss';
+@import '_mixins.scss';
+
+$initial_text_properties: (
+    color: $grey_dark,
+    font_family: 'Ubuntu',
+    font_size: 14px
+);
+
+$inner_max_width: 930px;
+
+body {
+    @include text_properties($initial_text_properties);
+}
+
+.inner {
+    display: flex;
+    width: 100%;
+    align-self: stretch;
+    max-width: $inner_max_width;
+    margin: 0 auto;
+}

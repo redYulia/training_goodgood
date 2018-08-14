@@ -1,8 +1,113 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: none; }
 
-a {
-  color: #00B7FF; }
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+body {
+  color: #515862;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px; }
+
+.inner {
+  display: flex;
+  width: 100%;
+  align-self: stretch;
+  max-width: 930px;
+  margin: 0 auto; }
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 80px; }
+  header .header_inner {
+    justify-content: space-between; }
+  header .right_part,
+  header .menu_container {
+    display: flex; }
+  header .menu {
+    display: inline-flex;
+    list-style-type: none; }
+    header .menu .menu_item {
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      position: relative;
+      padding: 0 20px; }
+      header .menu .menu_item span {
+        margin: auto; }
+      header .menu .menu_item:hover, header .menu .menu_item:focus {
+        color: #c5f4ff;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #11a3d5; }
+        header .menu .menu_item:hover:before, header .menu .menu_item:hover:after, header .menu .menu_item:focus:before, header .menu .menu_item:focus:after {
+          content: '';
+          background-color: #007fb7;
+          position: absolute; }
+        header .menu .menu_item:hover:after, header .menu .menu_item:focus:after {
+          width: 100%;
+          height: 10px;
+          left: 0;
+          bottom: 0; }
+  header .header_button {
+    cursor: pointer;
+    align-self: center;
+    border-radius: 3px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #f98561; }
+    header .header_button:hover, header .header_button:focus {
+      background-color: #f75f30; }
+  header .search_container {
+    width: 80px;
+    margin-left: 90px; }
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+body {
+  color: #515862;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px; }
+
+.inner {
+  display: flex;
+  width: 100%;
+  align-self: stretch;
+  max-width: 930px;
+  margin: 0 auto; }
+
+.promo {
+  width: 100%;
+  background-color: #515862; }
+
+.slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cccece;
+  text-align: center; }
+  .slide .slide_title {
+    font-family: "BebasNeue", sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0 0 30px; }
+  .slide .slide_description {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    margin: 0 0 45px; }
 
 /*# sourceMappingURL=style.css.map */

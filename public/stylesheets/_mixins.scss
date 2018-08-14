@@ -1,0 +1,37 @@
+@mixin text_properties($properties) {
+    @if map_has_key($properties, color) {
+        color: map-get($properties, color);
+    }
+
+    @if map_has_key($properties, font_family) {
+        font-family: map-get($properties, font_family), sans-serif;
+    }
+
+    @if map_has_key($properties, font_size) {
+        font-size: map-get($properties, font_size);
+    }
+
+    @if map_has_key($properties, font_weight) {
+        font-weight: map-get($properties, font_weight);
+    }
+
+    @if map-has-key($properties, font_style) {
+        font-style: map-get($properties, font_style);
+    }
+
+    @if map_has_key($properties, line_height) {
+        line-height: map-get($properties, line_height);
+    }
+
+    @if map-has-key($properties, text_align) {
+        text-align: map-get($properties, text_align);
+    }
+
+    @if map-has-key($properties, text_decoration) {
+        text-decoration: map-get($properties, text_decoration);
+    }
+
+    @if map-has-key($properties, text_transform) {
+        text-transform: map-get($properties, text_transform);
+    }
+}
