@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed");
-@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Bree+Serif");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Bree+Serif");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Bree+Serif");
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +8,11 @@
   border: 0;
   outline: none; }
 
+ul {
+  list-style-type: none; }
+
 @font-face {
-  font-family: "BebasNeue";
+  font-family: "Bebas Neue";
   src: url("../fonts/BebasNeue Regular.ttf") format("truetype");
   font-weight: normal; }
 
@@ -17,12 +21,51 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 14px; }
 
+section {
+  position: relative; }
+
+a {
+  color: #2190c1;
+  text-decoration: none; }
+  a:hover, a:active {
+    font-weight: bolder;
+    text-decoration: underline; }
+
 .inner {
   display: flex;
   width: 100%;
   align-self: stretch;
   max-width: 930px;
   margin: 0 auto; }
+
+.page_heading {
+  width: 100%;
+  background-color: #515862;
+  background-image: url("./../images/background.png");
+  background-position: center bottom;
+  background-size: cover; }
+
+button {
+  cursor: pointer;
+  text-align: center; }
+  button.primary_button {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 6px 25px;
+    border-radius: 3px; }
+  button.dark_button {
+    background-color: #2190c1; }
+    button.dark_button:hover, button.dark_button:active {
+      background-color: #007fb7;
+      box-shadow: 0px 3px 0px 0px #025568; }
+  button.light_button {
+    background-color: #f98561; }
+    button.light_button:hover, button.light_button:active {
+      background-color: #e2714f;
+      box-shadow: 0px 3px 0px 0px #a84c30; }
 
 header {
   display: flex;
@@ -32,12 +75,15 @@ header {
   header .header_inner {
     justify-content: space-between; }
   header .right_part,
+  header .left_part,
   header .menu_container {
     display: flex; }
+  header .left_part {
+    align-items: center; }
   header .menu {
-    display: inline-flex;
-    list-style-type: none; }
+    display: inline-flex; }
     header .menu .menu_item {
+      font-size: 14px;
       text-align: center;
       cursor: pointer;
       display: flex;
@@ -47,7 +93,6 @@ header {
         margin: auto; }
       header .menu .menu_item:hover, header .menu .menu_item:focus {
         color: #c5f4ff;
-        font-size: 15px;
         font-weight: bold;
         background-color: #11a3d5; }
         header .menu .menu_item:hover:before, header .menu .menu_item:hover:after, header .menu .menu_item:focus:before, header .menu .menu_item:focus:after {
@@ -60,20 +105,35 @@ header {
           left: 0;
           bottom: 0; }
   header .header_button {
-    cursor: pointer;
     align-self: center;
     border-radius: 3px;
     padding: 5px 20px;
+    margin: 0 20px;
     color: #fff;
+    font-size: 14px;
     background-color: #f98561; }
-    header .header_button:hover, header .header_button:focus {
-      background-color: #f75f30; }
+    header .header_button:hover, header .header_button:active {
+      background-color: #e2714f; }
   header .search_container {
-    width: 80px;
-    margin-left: 90px; }
+    margin-left: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    header .search_container .search_button_label {
+      color: #515862;
+      font-size: 12px;
+      margin: 0 5px 0 0; }
+    header .search_container .search_button {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      background-color: #f98561; }
+      header .search_container .search_button:hover, header .search_container .search_button:active {
+        background-color: #e2714f; }
 
 @font-face {
-  font-family: "BebasNeue";
+  font-family: "Bebas Neue";
   src: url("../fonts/BebasNeue Regular.ttf") format("truetype");
   font-weight: normal; }
 
@@ -82,6 +142,16 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 14px; }
 
+section {
+  position: relative; }
+
+a {
+  color: #2190c1;
+  text-decoration: none; }
+  a:hover, a:active {
+    font-weight: bolder;
+    text-decoration: underline; }
+
 .inner {
   display: flex;
   width: 100%;
@@ -89,19 +159,49 @@ body {
   max-width: 930px;
   margin: 0 auto; }
 
-.promo {
+.page_heading {
   width: 100%;
-  background-color: #515862; }
+  background-color: #515862;
+  background-image: url("./../images/background.png");
+  background-position: center bottom;
+  background-size: cover; }
+
+button {
+  cursor: pointer;
+  text-align: center; }
+  button.primary_button {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 6px 25px;
+    border-radius: 3px; }
+  button.dark_button {
+    background-color: #2190c1; }
+    button.dark_button:hover, button.dark_button:active {
+      background-color: #007fb7;
+      box-shadow: 0px 3px 0px 0px #025568; }
+  button.light_button {
+    background-color: #f98561; }
+    button.light_button:hover, button.light_button:active {
+      background-color: #e2714f;
+      box-shadow: 0px 3px 0px 0px #a84c30; }
+
+.promo_section {
+  height: 500px;
+  display: flex; }
 
 .slide {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   color: #cccece;
   text-align: center; }
   .slide .slide_title {
-    font-family: "BebasNeue", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 60px;
     text-transform: uppercase;
     margin: 0 0 30px; }
@@ -109,5 +209,107 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-size: 14px;
     margin: 0 0 45px; }
+  .slide .slide_button {
+    color: #ffebca;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 13px 55px;
+    border-radius: 5px; }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+body {
+  color: #515862;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px; }
+
+section {
+  position: relative; }
+
+a {
+  color: #2190c1;
+  text-decoration: none; }
+  a:hover, a:active {
+    font-weight: bolder;
+    text-decoration: underline; }
+
+.inner {
+  display: flex;
+  width: 100%;
+  align-self: stretch;
+  max-width: 930px;
+  margin: 0 auto; }
+
+.page_heading {
+  width: 100%;
+  background-color: #515862;
+  background-image: url("./../images/background.png");
+  background-position: center bottom;
+  background-size: cover; }
+
+button {
+  cursor: pointer;
+  text-align: center; }
+  button.primary_button {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 6px 25px;
+    border-radius: 3px; }
+  button.dark_button {
+    background-color: #2190c1; }
+    button.dark_button:hover, button.dark_button:active {
+      background-color: #007fb7;
+      box-shadow: 0px 3px 0px 0px #025568; }
+  button.light_button {
+    background-color: #f98561; }
+    button.light_button:hover, button.light_button:active {
+      background-color: #e2714f;
+      box-shadow: 0px 3px 0px 0px #a84c30; }
+
+.services_section {
+  background-color: #f4f4f4; }
+
+.services_inner {
+  flex-direction: column; }
+
+.services_button {
+  margin: 0 auto;
+  transform: translateY(-50%); }
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 35px; }
+  .services .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 45px; }
+    .services .service:first-child {
+      margin-left: 0; }
+    .services .service:last-child {
+      margin-right: 0; }
+    .services .service .service_icon {
+      width: 115px;
+      height: 115px;
+      margin: 0 0 25px; }
+    .services .service .service_title {
+      color: #515862;
+      font-family: "Bree Serif", sans-serif;
+      font-size: 17px;
+      text-align: center;
+      margin: 0 0 10px; }
+    .services .service .service_description {
+      color: #515862;
+      font-size: 11px;
+      line-height: 15px;
+      text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

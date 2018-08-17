@@ -2,22 +2,29 @@
 
 $header_menu_item_padding: 0 20px;
 $header_menu_item_text_properties: (
+    font_size: 14px,
     text_align: center
 );
 $header_menu_item_hover_bg_color: $blue;
 $header_menu_item_hover_text_properties: (
     color: $blue_light,
-    font_size: 15px,
     font_weight: bold
 );
 
 $header_button_padding: 5px 20px;
 $header_button_bg_color: $orange;
 $header_button_text_properties: (
+    font_size: 14px,
     color: $white
 );
 $header_button_hover_bg_color: $orange_dark;
 
+$search_button_label_margin: 0 5px 0 0;
+$search_button_label_text_properties: (
+    color: $grey_dark,
+    font_size: 12px
+);
+$search_button_size: 36px;
 
 header {
     display: flex;
@@ -30,13 +37,17 @@ header {
     }
 
     .right_part,
+    .left_part,
     .menu_container {
         display: flex;
     }
 
+    .left_part {
+        align-items: center;
+    }
+
     .menu {
         display: inline-flex;
-        list-style-type: none;
 
         .menu_item {
             @include text_properties($header_menu_item_text_properties);
@@ -72,21 +83,41 @@ header {
     }
 
     .header_button {
-        cursor: pointer;
         align-self: center;
         border-radius: 3px;
         padding: $header_button_padding;
+        margin: $header_menu_item_padding;
         @include text_properties($header_button_text_properties);
         background-color: $header_button_bg_color;
 
         &:hover,
-        &:focus {
+        &:active {
             background-color: $header_button_hover_bg_color;
         }
     }
 
     .search_container {
-        width: 80px;
-        margin-left: 90px;
+        margin-left: 100px;
+        align-self: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .search_button_label {
+            @include text_properties($search_button_label_text_properties);
+            margin: $search_button_label_margin;
+        }
+
+        .search_button {
+            border-radius: 50%;
+            width: $search_button_size;
+            height: $search_button_size;
+            background-color: $header_button_bg_color;
+
+            &:hover,
+            &:active {
+                background-color: $header_button_hover_bg_color;
+            }
+        }
     }
 }

@@ -8,10 +8,36 @@ $initial_text_properties: (
     font_size: 14px
 );
 
+$link_text_properties: (
+    color: $aqua,
+    text_decoration: none
+);
+
+$link_active_text_properties: (
+    font_weight: bolder,
+    text_decoration: underline
+);
+
 $inner_max_width: 930px;
+
+$page_heading_background_color: $grey_dark;
+$page_heading_background_image: url('./../images/background.png');
 
 body {
     @include text_properties($initial_text_properties);
+}
+
+section {
+    position: relative;
+}
+
+a {
+    @include text_properties($link_text_properties);
+
+    &:hover,
+    &:active {
+        @include text_properties($link_active_text_properties);
+    }
 }
 
 .inner {
@@ -21,3 +47,72 @@ body {
     max-width: $inner_max_width;
     margin: 0 auto;
 }
+
+.page_heading {
+    width: 100%;
+    background-color: $grey_dark;
+    background-image: $page_heading_background_image;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+//buttons
+
+$primary_button_padding: 6px 25px;
+$primary_button_border_radius: 3px;
+$primary_button_text_properties: (
+    font_size: 22px,
+    color: white,
+    font_family: "Bebas Neue",
+    text_transform: uppercase,
+    text_align: center
+);
+
+$secondary_button_text_properties: (
+    font_size: 12px,
+    color: white,
+    text_align: center
+);
+
+$dark_button_bg_color: $aqua;
+$dark_button_hover_bg_color: $blue_dark;
+$dark_button_hover_box_shadow: 0px 3px 0px 0px $blue_darkest;
+$light_button_bg_color: $orange;
+$light_button_hover_bg_color: $orange_dark;
+$light_button_hover_box_shadow: 0px 3px 0px 0px $orange_darkest;
+
+button {
+    cursor: pointer;
+    text-align: center;
+
+    &.primary_button {
+        @include text_properties($primary_button_text_properties);
+        padding: $primary_button_padding;
+        border-radius: $primary_button_border_radius;
+    }
+
+    &.secondary_button {
+
+    }
+
+    &.dark_button {
+        background-color: $dark_button_bg_color;
+
+        &:hover,
+        &:active {
+            background-color: $dark_button_hover_bg_color;
+            box-shadow: $dark_button_hover_box_shadow;
+        }
+    }
+
+    &.light_button {
+        background-color: $light_button_bg_color;
+
+        &:hover,
+        &:active {
+            background-color: $light_button_hover_bg_color;
+            box-shadow: $light_button_hover_box_shadow;
+        }
+    }
+}
+//end buttons

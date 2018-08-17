@@ -1,0 +1,74 @@
+@import '../../stylesheets/base';
+
+$services_section_bg_color: $grey_lightest;
+$services_padding: 20px 0 35px;
+
+$service_icon_size: 115px;
+$service_icon_margin: 0 0 25px;
+
+$service_margin: 0 45px;
+
+
+$service_title_margin: 0 0 10px;
+$service_title_text_properties: (
+    font_family: 'Bree Serif',
+    font_size: 17px,
+    color: $grey_dark,
+    text_align: center
+);
+
+$service_description_text_properties: (
+    font_size: 11px,
+    line_height: 15px,
+    color: $grey_dark,
+    text_align: center
+);
+
+.services_section {
+    background-color: $services_section_bg_color;
+}
+
+.services_inner {
+    flex-direction: column;
+}
+
+.services_button {
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding: $services_padding;
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: $service_margin;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .service_icon {
+            width: $service_icon_size;
+            height: $service_icon_size;
+            margin: $service_icon_margin;
+        }
+
+        .service_title {
+            @include text_properties($service_title_text_properties);
+            margin: $service_title_margin;
+        }
+
+        .service_description {
+            @include text_properties($service_description_text_properties);
+        }
+    }
+}

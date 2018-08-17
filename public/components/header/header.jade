@@ -1,14 +1,16 @@
 header#header
     .inner.header_inner
         .left_part
-            .logo
-                img
+            a(href='/').logo
+                img(src='images/logo.png')
         .right_part
             .menu_container
                 ul.menu
                     each val in ['Home', 'Portfolio', 'About', 'Contact']
                         li.menu_item
                             span=val
-                button.header_button Blog
+                button.secondary_button.light_button.header_button Blog
             .search_container
+                label(for='header_search_button').search_button_label Search
+                button.search_button#header_search_button
                 //input#search

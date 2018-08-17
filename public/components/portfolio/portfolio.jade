@@ -1,0 +1,10 @@
+section.services_section
+    .inner.services_inner
+        button.primary_button.dark_button.services_button Our Services
+        ul.services
+            each service in [{imgSrc: 'images/services/laptop.png', title: 'Web Design'}, {imgSrc: 'images/services/search.png', title: 'Search Optimization'}, {imgSrc: 'images/services/basket.png', title: 'Online Shop'}, {imgSrc: 'images/services/like.png', title: 'Social Media'}]
+                li.service
+                    img(src=service.imgSrc).service_icon
+                    h4.service_title=service.title
+                    p.service_description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus  commodo suscipit.
+                        a(href='') Details...
